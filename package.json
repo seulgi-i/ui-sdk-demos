@@ -1,14 +1,17 @@
 {
-  "name": "ui-sdk-category-picker",
+  "name": "ui-sdk-demos",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "capture:blog": "node scripts/capture-blog-images.mjs"
   },
   "dependencies": {
+    "@ui-sdk/core": "^0.1.0-beta.1",
+    "@ui-sdk/react": "^0.1.0-beta.1",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -20,6 +23,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "playwright": "^1.65.0",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   }

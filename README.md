@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ui-sdk-demos
 
-## Getting Started
+Next.js sandbox for [Vercel UI SDK](https://ui-sdk.dev) (`@ui-sdk/react` / `@ui-sdk/core`).
 
-First, run the development server:
+Two demos:
+
+| Route | Demo |
+| --- | --- |
+| `/` | 3-level category **Combobox** (typeahead + selection) |
+| `/command` | **Command palette** (Dialog + Command, `Ctrl/Cmd+K`) |
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seulgi-i/ui-sdk-demos.git
+cd ui-sdk-demos
+npm install
+npm run dev -- --port 3010
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Combobox: http://localhost:3010/
+- Command palette: http://localhost:3010/command
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Blog drafts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Language | File |
+| --- | --- |
+| Korean (티스토리용) | [`docs/blog-ko.md`](./docs/blog-ko.md) |
+| English (Hashnode용) | [`docs/blog-en.md`](./docs/blog-en.md) |
 
-## Learn More
+Screenshots used in the posts live in [`docs/images/`](./docs/images/).
 
-To learn more about Next.js, take a look at the following resources:
+Regenerate screenshots (dev server must be running on port 3010):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run capture:blog
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Publishing tips for Tistory / Hashnode: [`docs/PUBLISH.md`](./docs/PUBLISH.md)
 
-## Deploy on Vercel
+## Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js 16 (App Router) + React 19
+- `@ui-sdk/react` / `@ui-sdk/core` `0.1.0-beta.1`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Verified behaviors (short)
+
+### Combobox
+
+- Filter `채소` → 1 leaf; focus stays on input; `aria-activedescendant` highlights
+- `Enter` selects and closes; `Escape` restores the selected label and keeps input focus
+- Manual `ComboboxItem` maps did **not** filter; `items` + empty `ComboboxList` did
+
+### Command palette
+
+- Open focuses `command-input`; empty query shows 3 suggestions
+- Filter `카테고리` → 2 commands
+- `Enter` / `Escape` close the dialog and restore focus to the trigger
+
+## Layout
+
+```text
+src/
+  app/page.tsx                 # Combobox demo
+  app/command/page.tsx         # Command palette demo
+  components/
+  data/categories.json         # 30-node fake tree
+  data/commands.ts             # fake BO commands
+docs/
+  blog-ko.md
+  blog-en.md
+  images/
+scripts/capture-blog-images.mjs
+```
+
+## Links
+
+- UI SDK docs: https://ui-sdk.dev
+- Upstream: https://github.com/vercel-labs/ui

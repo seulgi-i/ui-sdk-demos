@@ -1,0 +1,116 @@
+[
+  {
+    "id": "1",
+    "name": "식품",
+    "parentId": null,
+    "depth": 1,
+    "children": [
+      {
+        "id": "2",
+        "name": "신선식품",
+        "parentId": "1",
+        "depth": 2,
+        "children": [
+          { "id": "3", "name": "채소", "parentId": "2", "depth": 3, "children": [] },
+          { "id": "4", "name": "과일", "parentId": "2", "depth": 3, "children": [] },
+          { "id": "5", "name": "수산물", "parentId": "2", "depth": 3, "children": [] }
+        ]
+      },
+      {
+        "id": "6",
+        "name": "가공식품",
+        "parentId": "1",
+        "depth": 2,
+        "children": [
+          { "id": "7", "name": "즉석식품", "parentId": "6", "depth": 3, "children": [] },
+          { "id": "8", "name": "면/스낵", "parentId": "6", "depth": 3, "children": [] },
+          { "id": "9", "name": "음료", "parentId": "6", "depth": 3, "children": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "생활",
+    "parentId": null,
+    "depth": 1,
+    "children": [
+      {
+        "id": "11",
+        "name": "주방용품",
+        "parentId": "10",
+        "depth": 2,
+        "children": [
+          { "id": "12", "name": "조리도구", "parentId": "11", "depth": 3, "children": [] },
+          { "id": "13", "name": "보관용기", "parentId": "11", "depth": 3, "children": [] }
+        ]
+      },
+      {
+        "id": "14",
+        "name": "청소/세탁",
+        "parentId": "10",
+        "depth": 2,
+        "children": [
+          { "id": "15", "name": "세제", "parentId": "14", "depth": 3, "children": [] },
+          { "id": "16", "name": "청소도구", "parentId": "14", "depth": 3, "children": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "패션",
+    "parentId": null,
+    "depth": 1,
+    "children": [
+      {
+        "id": "18",
+        "name": "남성의류",
+        "parentId": "17",
+        "depth": 2,
+        "children": [
+          { "id": "19", "name": "상의", "parentId": "18", "depth": 3, "children": [] },
+          { "id": "20", "name": "하의", "parentId": "18", "depth": 3, "children": [] }
+        ]
+      },
+      {
+        "id": "21",
+        "name": "여성의류",
+        "parentId": "17",
+        "depth": 2,
+        "children": [
+          { "id": "22", "name": "원피스", "parentId": "21", "depth": 3, "children": [] },
+          { "id": "23", "name": "아우터", "parentId": "21", "depth": 3, "children": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "name": "가전",
+    "parentId": null,
+    "depth": 1,
+    "children": [
+      {
+        "id": "25",
+        "name": "주방가전",
+        "parentId": "24",
+        "depth": 2,
+        "children": [
+          { "id": "26", "name": "냉장고", "parentId": "25", "depth": 3, "children": [] },
+          { "id": "27", "name": "전자레인지", "parentId": "25", "depth": 3, "children": [] }
+        ]
+      },
+      {
+        "id": "28",
+        "name": "생활가전",
+        "parentId": "24",
+        "depth": 2,
+        "children": [
+          { "id": "29", "name": "청소기", "parentId": "28", "depth": 3, "children": [] },
+          { "id": "30", "name": "공기청정기", "parentId": "28", "depth": 3, "children": [] }
+        ]
+      }
+    ]
+  }
+]
