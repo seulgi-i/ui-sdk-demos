@@ -21,22 +21,15 @@ npm run dev -- --port 3010
 - Combobox: http://localhost:3010/
 - Command palette: http://localhost:3010/command
 
-## Blog drafts
+## Screenshots
 
-| Language | File |
-| --- | --- |
-| Korean (티스토리용) | [`docs/blog-ko.md`](./docs/blog-ko.md) |
-| English (Hashnode용) | [`docs/blog-en.md`](./docs/blog-en.md) |
+Demo screenshots: [`docs/images/`](./docs/images/)
 
-Screenshots used in the posts live in [`docs/images/`](./docs/images/).
-
-Regenerate screenshots (dev server must be running on port 3010):
+Regenerate (dev server on port 3010):
 
 ```bash
 npm run capture:blog
 ```
-
-Publishing tips for Tistory / Hashnode: [`docs/PUBLISH.md`](./docs/PUBLISH.md)
 
 ## Stack
 
@@ -67,8 +60,6 @@ src/
   data/categories.json         # 30-node fake tree
   data/commands.ts             # fake BO commands
 docs/
-  blog-ko.md
-  blog-en.md
   images/
 scripts/capture-blog-images.mjs
 ```
